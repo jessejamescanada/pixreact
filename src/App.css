@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -34,5 +34,102 @@
   }
   to {
     transform: rotate(360deg);
+  }
+} */
+
+body {
+  background: rgb(233, 233, 233);
+}
+
+.searchBar {
+  width: 600px;
+  margin: 4rem auto;
+}
+
+.searchBar span {
+  font-family: 'Nunito', sans-serif;
+  font-size: 2rem;
+}
+
+.searchBar input {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  border: #777 1px solid;
+  padding: 5px 5px;
+  border-radius: 6px;
+  font-size: 1.5rem;
+}
+
+.searchBar label {
+  display: flex;
+  flex-direction: column;
+}
+
+.searchBar button {
+  padding: 8px 15px;
+  margin-top: 5px;
+  border: none;
+  background: rgba(230, 166, 71, 0.877);
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #333;
+  transform: scale(0.98);
+}
+
+.searchBar button:hover {
+  background: rgb(233, 131, 58);
+  color: white;
+  transform: scale(1);
+}
+
+.photosContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  gap: 10px;
+}
+
+.photos {
+  width: 380px;
+  height: auto;
+  border-radius: 3px;
+  transition: ease-out 0.2s;
+}
+
+.photos:hover {
+  transform: scale(1.2);
+  transition: ease-in-out 0.2s;
+}
+
+.error,
+.error2 {
+  color: rgb(255, 55, 55);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  margin: auto;
+}
+
+@media (max-width: 1000px) {
+  .photosContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .searchBar {
+    width: auto;
   }
 }
